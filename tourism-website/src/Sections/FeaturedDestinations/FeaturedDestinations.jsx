@@ -41,7 +41,6 @@ let destinations = [
     url: RajaAmpat,
   },
 ];
-let a;
 
 export default function FeaturedDestinations() {
   const [justify, setJustify] = useState("space-around");
