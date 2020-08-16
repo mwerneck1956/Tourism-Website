@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 //Core components
 import { Grid } from "@material-ui/core";
@@ -9,6 +9,16 @@ import RajaAmpat from "../../assets/images/RajaAmpat.png";
 import Vevey from "../../assets/images/Vevey.png";
 //CSS
 import "../FeaturedDestinations/style/FeaturedDestinations.css";
+let height = window.innerHeight;
+let width = window.innerWidth;
+//Height and width
+/*
+window.addEventListener("resize", () => {
+  height = window.innerHeight;
+  width = window.innerWidth;
+  console.log("Altura", height, "Largura", width);
+});
+*/
 let destinations = [
   {
     name: "Fanjinghsan",
@@ -33,36 +43,45 @@ let destinations = [
 ];
 
 export default function FeaturedDestinations() {
-  function renderImages() {
-    destinations.map((destination) => {
-      return (
-        <Grid direction="column" lg={2}>
-          <img src={destination.url} />
-        </Grid>
-      );
-    });
+  const [justify, setJustify] = useState("space-around");
+  const [width,setWidth] = useState(200)
+  function justifySpace(){
+    window.addEventListener("resize" , () => {
+        
+        setWidth(window.innerWidth)
+        if(window.innerWidth > 400)
+        setJustify("space-around")
+        else
+        setJustify("center")
+        console.log('widht' , width ,'justify' , justify)
+    } )
   }
+  useEffect(() => {
+    justifySpace()
+  }, []);
   return (
-    <Grid
-      lg={12}
-      style={{ marginTop: "120px" }}
-      justify="space-around"
-      alignItems="center"
-      direction="row"
-      container
-    >
-      <Grid xs={12}>
+    <Grid style={{ marginTop: "120px" }}>
+      <Grid lg={8} direction="row" justify="flex-start" container>
+        <Grid xs={2} />
         <h1 className="featuredDestinationsTitle">Featured Destinations</h1>
       </Grid>
-      <Grid xl={1} />
-      {destinations.map((destination) => {
-        return (
-          <Grid direction="column" lg={2}>
-            <img src={destination.url} />
-          </Grid>
-        );
-      })}
-      <Grid xl={1} />
+      <Grid
+        lg={12}
+        justify="center"
+        alignItems="center"
+        direction="row"
+        container
+      >
+        <Grid xl={1} />
+        {destinations.map((destination) => {
+          return (
+            <Grid className ='imgGrid' direction="column" sm ={5} md={5} xs={8} lg={2}>
+              <img className="destinationsImages" src={destination.url} />
+            </Grid>
+          );
+        })}
+        <Grid xl={1} />
+      </Grid>
     </Grid>
   );
 }

@@ -5,6 +5,8 @@ import "./styles/LearnMore.css";
 import { Grid, Button } from "@material-ui/core";
 //Images
 import learnMoreImage from "../../assets/images/learnMoreImage.png";
+
+
 export default function LearnMore() {
   return (
     <Grid
@@ -16,6 +18,7 @@ export default function LearnMore() {
       container
       direction="row"
     >
+     
       <Grid xl={1} />
       <Grid direction="column" sm={5} md={5} xs={10} xl={5} lg={5}>
         <img className="learnMoreIlustration" src={learnMoreImage} />
