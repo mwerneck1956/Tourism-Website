@@ -10,6 +10,7 @@ import learnMoreImage from "../../assets/images/learnMoreImage.png";
 export default function LearnMore() {
   return (
     <Grid
+      style={{marginTop:"25px"}}
       lg={12}
       xl={12}
       spacing={6}
@@ -32,7 +33,7 @@ export default function LearnMore() {
           let Lonely Planet Experiences lead the way
         </p>
         <Button className="learnMoreButton" variant="contained">
-          Learn More
+          Learn&nbsp;More&nbsp;
         </Button>
       </Grid>
       <Grid xl={1} />

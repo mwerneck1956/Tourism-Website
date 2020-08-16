@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b22527ac.chunk.css",
+    "main.js": "/static/js/main.0f27b088.chunk.js",
+    "main.js.map": "/static/js/main.0f27b088.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.86c16728.js",
+    "runtime-main.js.map": "/static/js/runtime-main.86c16728.js.map",
+    "static/js/2.ab4dd25d.chunk.js": "/static/js/2.ab4dd25d.chunk.js",
+    "static/js/2.ab4dd25d.chunk.js.map": "/static/js/2.ab4dd25d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9a6249364d3a85ad5b983da6c048c078.js": "/precache-manifest.9a6249364d3a85ad5b983da6c048c078.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b22527ac.chunk.css.map": "/static/css/main.b22527ac.chunk.css.map",
+    "static/js/2.ab4dd25d.chunk.js.LICENSE.txt": "/static/js/2.ab4dd25d.chunk.js.LICENSE.txt",
+    "static/media/Fanjingshan.png": "/static/media/Fanjingshan.aec6a66c.png",
+    "static/media/RajaAmpat.png": "/static/media/RajaAmpat.79af7a24.png",
+    "static/media/Skadar.png": "/static/media/Skadar.d685a8db.png",
+    "static/media/Vevey.png": "/static/media/Vevey.53f33c2c.png",
+    "static/media/learnMoreImage.png": "/static/media/learnMoreImage.c2272ed1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86c16728.js",
+    "static/js/2.ab4dd25d.chunk.js",
+    "static/css/main.b22527ac.chunk.css",
+    "static/js/main.0f27b088.chunk.js"
+  ]
+}

@@ -44,20 +44,17 @@ let destinations = [
 
 export default function FeaturedDestinations() {
   const [justify, setJustify] = useState("space-around");
-  const [width,setWidth] = useState(200)
-  function justifySpace(){
-    window.addEventListener("resize" , () => {
-        
-        setWidth(window.innerWidth)
-        if(window.innerWidth > 400)
-        setJustify("space-around")
-        else
-        setJustify("center")
-        console.log('widht' , width ,'justify' , justify)
-    } )
+  const [width, setWidth] = useState(200);
+  function justifySpace() {
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth);
+      if (window.innerWidth > 400) setJustify("space-around");
+      else setJustify("center");
+      console.log("widht", width, "justify", justify);
+    });
   }
   useEffect(() => {
-    justifySpace()
+    justifySpace();
   }, []);
   return (
     <Grid style={{ marginTop: "120px" }}>
@@ -66,6 +63,7 @@ export default function FeaturedDestinations() {
         <h1 className="featuredDestinationsTitle">Featured Destinations</h1>
       </Grid>
       <Grid
+        spacing={3}
         lg={12}
         justify="center"
         alignItems="center"
@@ -75,8 +73,16 @@ export default function FeaturedDestinations() {
         <Grid xl={1} />
         {destinations.map((destination) => {
           return (
-            <Grid className ='imgGrid' direction="column" sm ={5} md={5} xs={8} lg={2}>
-              <img className="destinationsImages" src={destination.url} />
+            <Grid
+              item
+              //className="imgGrid"
+              direction="column"
+              sm={5}
+              md={5}
+              xs={8}
+              lg={2}
+            >
+              <img alt="imagem do destino" className="destinationsImages" src={destination.url} />
             </Grid>
           );
         })}

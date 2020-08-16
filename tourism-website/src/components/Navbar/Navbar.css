@@ -9,7 +9,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #b8becd;
+  color: #b8becd!important;
 }
 
 .navItem:hover {
@@ -45,7 +45,6 @@
   border-radius: 8px;
 }
 .loginBtn {
-  width: 60%;
   border-radius: 10px !important;
   border-color: #fb8f1d !important;
   text-transform: none !important;
