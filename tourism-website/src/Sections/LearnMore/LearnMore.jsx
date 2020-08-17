@@ -21,11 +21,11 @@ export default function LearnMore() {
     >
      
       <Grid xl={1} />
-      <Grid direction="column" sm={5} md={5} xs={10} xl={5} lg={5}>
+      <Grid direction="column" sm={5} md={5} xs={10} xl={5} lg={4}>
         <img className="learnMoreIlustration" src={learnMoreImage} />
       </Grid>
 
-      <Grid direction="column" sm={6} md={5} xs={12} xl={4} lg={5}>
+      <Grid direction="column" sm={6} md={5} xs={12} xl={4} lg={4}>
         <h2 className="learnMoreTitle">A new way to explore the world</h2>
         <p className="learnMoreText">
           For decades travellers have reached for Lonely Planet books when
